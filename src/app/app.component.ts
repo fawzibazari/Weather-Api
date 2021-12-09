@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'angular-weather-api';
   city!: any;
   show!: any;
+  ifvisible: boolean = false;
 constructor (private ws: WeatherService){
 }
 ngOninit(){
@@ -22,12 +23,12 @@ loadweather(){
   this.ws.getCurrentWeather(this.city).subscribe(
 
     res =>{
+      this.ifvisible = true;
       this.show = res
       console.log(res);
       // console.log(this.city)
       this.city = "";
       // var iconcode = this.show.eather[0].icon;
-
     }
   )}
 }

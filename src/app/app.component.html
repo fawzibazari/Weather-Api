@@ -12,7 +12,7 @@
   
   <button type="reset" (click)="loadweather()">rechercher</button>
 </div>
-<div>
+<div *ngIf="ifvisible == true">
 <span> <img src="http://openweathermap.org/img/w/{{show?.weather[0].icon}}.png"></span>
 
  <p>Ville: {{show?.name}}</p>
