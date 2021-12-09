@@ -26,6 +26,8 @@ loadweather(){
       console.log(res);
       // console.log(this.city)
       this.city = "";
+      // var iconcode = this.show.eather[0].icon;
+
     }
   )}
 }

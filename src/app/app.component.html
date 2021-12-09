@@ -13,11 +13,13 @@
   <button type="reset" (click)="loadweather()">rechercher</button>
 </div>
 <div>
+<span> <img src="http://openweathermap.org/img/w/{{show?.weather[0].icon}}.png"></span>
 
- <p>Ville: {{show.name}}</p>
- <p>pays: {{show.sys.country}}</p>
+ <p>Ville: {{show?.name}}</p>
+ <p>pays: {{show?.sys.country}}</p>
+ <p>Main: {{show?.weather[0].main}}</p>
+ <p>Description: {{show?.weather[0].description}}</p>
 
- <p>Feels-like: {{show.main.feels_like}}</p>
   <br>
   
 
