@@ -10,10 +10,17 @@
   <div>
   <input placeholder="City" [(ngModel)]="city">
   
-  <button (click)="loadweather()">rechercher</button>
+  <button type="reset" (click)="loadweather()">rechercher</button>
 </div>
 <div>
-  {{affiche.name}}
+
+ <p>Ville: {{show.name}}</p>
+ <p>pays: {{show.sys.country}}</p>
+
+ <p>Feels-like: {{show.main.feels_like}}</p>
+  <br>
+  
+
 </div>
 </body>
 </html>

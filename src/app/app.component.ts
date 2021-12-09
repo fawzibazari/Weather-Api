@@ -9,11 +9,9 @@ import { Weather, WeatherService } from './weather.service';
 })
 export class AppComponent {
 
-
   title = 'angular-weather-api';
   city!: any;
-  affiche!: any;
-
+  show!: any;
 constructor (private ws: WeatherService){
 }
 ngOninit(){
@@ -24,14 +22,10 @@ loadweather(){
   this.ws.getCurrentWeather(this.city).subscribe(
 
     res =>{
-      this.affiche = res.city
-      // let test = res.city
-
-      console.log(this.affiche);
-      console.log(this.affiche.name)
+      this.show = res
+      console.log(res);
+      // console.log(this.city)
       this.city = "";
     }
-
-  )
-}
+  )}
 }
